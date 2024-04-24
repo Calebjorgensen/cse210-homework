@@ -4,9 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        for (int i=2; i < 10; i++)
+
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1,101);
+
+        int guess = -1;
+
+        while (guess != magicNumber)
         {
-            Console.WriteLine(i);
+            Console.WriteLine("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());
+
+            if (magicNumber > guess)
+            {
+                Console.WriteLine("Higher");
+            }
+            else if (magicNumber < guess)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You got it!");
+            }
         }
+
     }
 }
