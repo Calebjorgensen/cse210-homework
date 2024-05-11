@@ -1,9 +1,9 @@
 using System;
 
-class World
+class Word
 {
     private string _text;
-    private bool _isHidden;
+    public bool _isHidden;
 
     public Word(string text)
     {

@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class Scripture
 {
@@ -8,7 +9,7 @@ class Scripture
     public Scripture(Reference reference, string text)
     {
         _Reference = reference;
-        _Words = text.Split('').Select(w =. new Word(w)).ToList();
+        _Words = text.Split('').Select(w => new Word(w)).ToList();
     }
 
     public void HideRandomWords()
@@ -19,7 +20,7 @@ class Scripture
         {
             wordToHide.Hide();
         }
-        else
+        else 
         {
             HideRandomWords();
         }
