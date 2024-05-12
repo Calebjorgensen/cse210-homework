@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        var scritpure = new Scripture(new Reference("Test", 1,2,3), "This is a test to see if this works?");
+        var scritpure = new Scripture(new Reference("Mosiah", 2,17), "And behold, I tell you these things that ye may learn wisdom; that ye may learn that when ye are in the service of your fellow beings ye are only in the service of your God.");
 
         while(!scritpure.AllWordsHidden)
         {

@@ -2,6 +2,8 @@ using System;
 
 class Reference
 {
+
+    //The goals of the Refenence class are to store the data need such as book, chapter, startverse, and endverse.
     private string _book;
     private int _chapter;
     private int _startVerse;
