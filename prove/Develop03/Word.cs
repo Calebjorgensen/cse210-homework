@@ -14,6 +14,9 @@ class Word
 
     public void Hide()
     {
-        
+        _isHidden = true;
     }
+
+    public override string ToString() => _isHidden ? "____" : _text;
+
 }

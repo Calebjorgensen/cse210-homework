@@ -9,6 +9,7 @@ class Reference
     private int _startVerse;
     private int? _endVerse;
 
+    //This is the constructor for the reference part of the program. 
     public Reference(string book, int chapter, int startVerse, int? endVerse = null)
     {
         _book = book;

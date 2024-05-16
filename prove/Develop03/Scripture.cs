@@ -6,12 +6,15 @@ class Scripture
     private Reference _Reference;
     private List<Word> _Words;
 
+    // This is the constructor of the scripture part of the program. 
     public Scripture(Reference reference, string text)
     {
         _Reference = reference;
         _Words = text.Split(' ').Select(w => new Word(w)).ToList();
     }
 
+
+    //The next part of the code is use to get the randomness of the words to hide.
     public void HideRandomWords()
     {
         Random rand = new Random();
