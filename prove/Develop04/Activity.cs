@@ -37,36 +37,45 @@ public abstract class Activity
 
     public void Countdown(){
         Console.WriteLine("This program will begin in ..");
+
         Console.WriteLine("5");
         Thread.Sleep(1000);
         Console.WriteLine("\b \b");
+
         Console.WriteLine("4");
         Thread.Sleep(1000);
         Console.WriteLine("\b \b");
+
         Console.WriteLine("3");
         Thread.Sleep(1000);
         Console.WriteLine("\b \b");
+
         Console.WriteLine("2");
         Thread.Sleep(1000);
         Console.WriteLine("\b \b");
+
         Console.WriteLine("1");
         Thread.Sleep(1000);
         Console.WriteLine("\b \b");
+
         Console.WriteLine("Begin!");
     }
 
-    public PauseAnimation(int timer){
+    public void PauseAnimation(int timer){
         int x = 0;
         while(x != timer){
             Console.WriteLine("/");
             Thread.Sleep(250);
             Console.WriteLine("\b \b");
+
             Console.WriteLine("-");
             Thread.Sleep(250);
             Console.WriteLine("\b \b");
+
             Console.WriteLine("\\");
             Thread.Sleep(250);
             Console.WriteLine("\b \b");
+            
             Console.WriteLine("|");
             Thread.Sleep(250);
             Console.WriteLine("\b \b");

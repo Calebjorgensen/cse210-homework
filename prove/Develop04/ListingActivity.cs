@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 
 public class ListingActivity : Activity
 {
@@ -7,21 +8,29 @@ public class ListingActivity : Activity
     private List<string> _response;
     private string _user;
 
-    public ListingActivity(): base("\nListing Activity", "This activity will help you reflect on the good tihngs in your having you list as many things"){
+
+    //The block of Code is used to get the random prompts for the listing activity.
+    public ListingActivity(): base("\nListing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area."){
         _rand = new Random();
         _listingQuestion = new string[]
         {
             "Who are people that you appreciate?",
-            "What are personal strengths of yours?"
+            "What are personal strengths of yours?",
+            "Who are people that you have helped this week?",
+            "When have you felt the Holy Ghost this month?",
+            "Who are some of your personal heros?"
         };
         _response = new List<string>();
     }
 
+    //This is used from the base class of Activity.
     public void Start()
     {
         base.StartMessage();
     }
 
+
+    // This is the code need to make the listing work.
     public void RunActivity(int time){
         Console.Clear();
         base.Countdown();
