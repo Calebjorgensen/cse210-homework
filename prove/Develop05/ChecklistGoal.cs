@@ -59,7 +59,7 @@ public class ChecklistGoal : Goal{
 
             count++;
         }
-        Console.WriteLine("\nPlease select the goal to complete: ");
+        Console.WriteLine("Please select the goal to complete: ");
         user = int.Parse(Console.ReadLine());
         goal = _checklistList[user];
         _score = int.Parse(_checklistList[user+1]);

@@ -34,25 +34,21 @@ public class SaveLoad{
         string fileName = Console.ReadLine();
         string[] lines = File.ReadAllLines(fileName);
 
-        // Initialize lists for different types of goals
+        
         List<string> simpleGoals = new List<string>();
         List<string> eternalGoals = new List<string>();
         List<string> checklistGoals = new List<string>();
 
-        // Read the score from line 0
         int score = int.Parse(lines[0]);
 
-        // Index to keep track of the current line being processed
         int currentLineIndex = 1;
 
-        // Process simple Goals 
         while (currentLineIndex < lines.Length && !lines[currentLineIndex].StartsWith("Eternal Goals: "))
         {
             simpleGoals.Add(lines[currentLineIndex]);
             currentLineIndex++;
         }
 
-        // Process Eternal Goals
         currentLineIndex++;
         while (currentLineIndex < lines.Length && !lines[currentLineIndex].StartsWith("Checklist Goals: "))
         {
@@ -60,7 +56,6 @@ public class SaveLoad{
             currentLineIndex++;
         }
 
-        // Process Checklist Goals 
         currentLineIndex++;
         while (currentLineIndex < lines.Length)
         {
@@ -68,16 +63,15 @@ public class SaveLoad{
             currentLineIndex++;
         }
 
-        // Display the results
-        Console.WriteLine($"Score: {score}\n");
+        Console.WriteLine($"Score: {score}");
 
         Console.WriteLine("Simple Goals: ");
         simple.DisplayGoals();
 
-        Console.WriteLine("\nEternal Goals: ");
+        Console.WriteLine("Eternal Goals: ");
         eternal.DisplayGoals();
 
-        Console.WriteLine("\nChecklist Goals: ");
+        Console.WriteLine("Checklist Goals: ");
         checklist.DisplayGoals();
 
         return score;

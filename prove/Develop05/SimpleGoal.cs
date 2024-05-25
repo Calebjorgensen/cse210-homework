@@ -45,7 +45,7 @@ public class SimpleGoal : Goal{
             count++;
         }
 
-        Console.WriteLine("\nPlease select the goal to complete: ");
+        Console.WriteLine("Please select the goal to complete: ");
         user = int.Parse(Console.ReadLine());
         goal = _simpleList[user];
         _score = int.Parse(_simpleList[user+1]);

@@ -18,12 +18,12 @@ class Program
         {
             Console.WriteLine("Menu");
             Console.WriteLine("1. Manage Gaols");
-            Console.WriteLine("Show Score");
-            Console.WriteLine("Save Goals");
-            Console.WriteLine("Load Goals");
-            Console.WriteLine("Exit");
+            Console.WriteLine("2. Show Score");
+            Console.WriteLine("3. Save Goals");
+            Console.WriteLine("4. Load Goals");
+            Console.WriteLine("0. Exit");
 
-            Console.Write("\n Enter your Choice: ");
+            Console.Write("Enter your Choice: ");
             user = Console.ReadLine();
 
             switch (user)
@@ -46,6 +46,9 @@ class Program
 
                 case "0":
                 Console.WriteLine("Exiting the program. Goodbye!");
+                return;
+                default:
+                Console.WriteLine("Invalid choice, Please try again");
                 break;
             }
         }

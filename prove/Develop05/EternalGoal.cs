@@ -47,7 +47,7 @@ public class EternalGoal : Goal{
             count++;
         }
 
-        Console.WriteLine("\nPlease select the goal to complete: ");
+        Console.WriteLine("Please select the goal to complete: ");
         user = int.Parse(Console.ReadLine());
         goal = _eternalList[user];
         _score = int.Parse(_eternalList[user+1]);
